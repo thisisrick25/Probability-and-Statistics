@@ -1,0 +1,44 @@
+---
+format: html
+jupyter: python3
+---
+
+# Probability Distributions
+
+❐ Chebyshev's inequality ― Let $X$ be a random variable with expected value $\mu$. For $k,\sigma > 0$, we have the following inequality:
+
+$$P(|X - \mu| \geq k \sigma) \leq \frac{1}{k^2}$$
+
+```{python}
+# Chebyshev's inequality demo
+import numpy as np
+
+data = np.random.normal(0, 2, 10000)
+mu, sigma = np.mean(data), np.std(data)
+k = 2
+bound = 1 / k**2
+actual = np.mean(np.abs(data - mu) >= k * sigma)
+print(f"Chebyshev bound: {bound:.3f}, Actual: {actual:.3f}")
+```
+
+❐ Discrete distributions ― Main discrete distributions: Binomial, Poisson, etc.
+
+❐ Continuous distributions ― Main continuous distributions: Uniform, Normal, Exponential, etc.
+
+```{python}
+# Examples of distributions
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import uniform, expon
+
+# Uniform
+a, b = 0, 1
+x = np.linspace(a-0.5, b+0.5, 400)
+plt.plot(x, uniform.pdf(x, loc=a, scale=b-a), label='Uniform')
+plt.legend(); plt.show()
+
+# Exponential
+x = np.linspace(0, 5, 400)
+plt.plot(x, expon.pdf(x), label='Exponential')
+plt.legend(); plt.show()
+```

@@ -1,0 +1,69 @@
+---
+format: html
+jupyter: python3
+---
+
+# Introduction to Probability and Combinatorics
+
+Theory in Markdown/LaTeX; code for exploration.
+
+- Sample space ― The set of all possible outcomes of an experiment is known as the sample space of the experiment and is denoted by $S$.
+
+- Event ― Any subset $E$ of the sample space is known as an event. That is, an event is a set consisting of possible outcomes of the experiment. If the outcome of the experiment is contained in $E$, then we say that $E$ has occurred.
+
+- Axioms of probability ― For each event $E$, we denote $P(E)$ as the probability of event $E$ occurring.
+
+Axiom 1 ― Every probability is between 0 and 1 included, i.e:
+
+$$0 \leq P(E) \leq 1$$
+
+Axiom 2 ― The probability that at least one of the elementary events in the entire sample space will occur is 1, i.e:
+
+$$P(S) = 1$$
+
+Axiom 3 ― For any sequence of mutually exclusive events $E_1, \dots, E_n$, we have:
+
+$$P(\bigcup_{i=1}^n E_i) = \sum_{i=1}^n P(E_i)$$
+
+```{python}
+# Simulate coin flips to verify axioms
+import numpy as np
+
+# Axiom 1: Probabilities between 0 and 1
+p_heads = 0.5
+print(f"P(heads) = {p_heads}, which is in [0,1]: {0 <= p_heads <= 1}")
+
+# Axiom 2: P(S) = 1
+print(f"P(S) = 1: {1 == 1}")
+
+# Axiom 3: Addition for mutually exclusive events
+# P(heads or tails) = P(heads) + P(tails)
+p_tails = 1 - p_heads
+p_union = p_heads + p_tails
+print(f"P(heads or tails) = {p_union}")
+```
+
+- Permutation ― A permutation is an arrangement of $r$ objects from a pool of $n$ objects, in a given order. The number of such arrangements is given by $P(n,r)$, defined as:
+
+$P(n,r) = \frac{n!}{(n-r)!}$
+
+- Combination ― A combination is an arrangement of $r$ objects from a pool of $n$ objects, where the order does not matter. The number of such arrangements is given by $C(n,r)$, defined as:
+
+$C(n,r) = \frac{P(n,r)}{r!} = \frac{n!}{r!(n-r)!}$
+
+Remark: we note that for $0 \leq r \leq n$, we have $P(n,r) \geq C(n,r)$.
+
+```{python}
+from math import factorial
+
+def P(n, r):
+    return factorial(n) // factorial(n - r)
+
+def C(n, r):
+    return factorial(n) // (factorial(r) * factorial(n - r))
+
+n, r = 5, 3
+print(f"P({n},{r}) = {P(n,r)}")
+print(f"C({n},{r}) = {C(n,r)}")
+print(f"P >= C: {P(n,r) >= C(n,r)}")
+```
