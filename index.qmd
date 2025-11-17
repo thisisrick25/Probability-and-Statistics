@@ -1,6 +1,6 @@
-# Index {.unnumbered}
+# About {.unnumbered}
 
-Welcome to the Probability and Statistics book. Use the links below to navigate to the main sections.
+My notes on Probability and Statistics.
 
 - [Probability](probability.qmd)
 - [References](references.qmd)
