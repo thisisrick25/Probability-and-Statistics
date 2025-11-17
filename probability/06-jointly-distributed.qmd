@@ -1,0 +1,67 @@
+## Jointly Distributed Random Variables
+
+- Joint probability density function ― The joint probability density function of two random variables $X$ and $Y$, that we note $f_{XY}$, is defined as follows:
+
+(D) $$\boxed{f_{XY}(x_i, y_j) = P(X = x_i \text{ and } Y = y_j)}$$ (C) $$\boxed{f_{XY}(x,y) \Delta x \Delta y = P(x \leq X \leq x + \Delta x \text{ and } y \leq Y \leq y + \Delta y)}$$
+
+- Marginal density ― We define the marginal density for the variable $X$ as follows:
+
+(D) $$\boxed{f_X(x_i) = \sum_j f_{XY}(x_i, y_j)}$$ and (C) $$\boxed{f_X(x) = \int_{-\infty}^{+\infty} f_{XY}(x,y) dy}$$
+
+- Cumulative distribution ― We define cumulative distribution $F_{XY}$ as follows:
+
+(D) $$\boxed{F_{XY}(x,y) = \sum_{x_i \leq x} \sum_{y_j \leq y} f_{XY}(x_i, y_j)}$$ and (C) $$\boxed{F_{XY}(x,y) = \int_{-\infty}^x \int_{-\infty}^y f_{XY}(x',y') dx' dy'}$$
+
+- Conditional density ― The conditional density of $X$ with respect to $Y$, often noted $f_{X|Y}$, is defined as follows:
+
+$$\boxed{f_{X|Y}(x) = \frac{f_{XY}(x,y)}{f_Y(y)}}$$
+
+- Independence ― Two random variables $X$ and $Y$ are said to be independent if we have:
+
+$$\boxed{f_{XY}(x,y) = f_X(x) f_Y(y)}$$
+
+- Moments of joint distributions ― We define the moments of joint distributions of random variables $X$ and $Y$ as follows:
+
+(D) $$\boxed{E[X^p Y^q] = \sum_i \sum_j x_i^p y_j^q f(x_i, y_j)}$$ and (C) $$\boxed{E[X^p Y^q] = \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} x^p y^q f(x,y) dy dx}$$
+
+- Distribution of a sum of independent random variables ― Let $Y = X_1 + \dots + X_n$ with $X_1, \dots, X_n$ independent. We have:
+
+$$\boxed{\psi_Y(\omega) = \prod_{k=1}^n \psi_{X_k}(\omega)}$$
+
+- Covariance ― We define the covariance of two random variables $X$ and $Y$, that we note $\sigma_{XY}^2$ or more commonly $\mathrm{Cov}(X,Y)$, as follows:
+
+$$\boxed{\mathrm{Cov}(X,Y) \triangleq \sigma_{XY}^2 = E[(X - \mu_X)(Y - \mu_Y)] = E[XY] - \mu_X \mu_Y}$$
+
+- Correlation ― By noting $\sigma_X, \sigma_Y$ the standard deviations of $X$ and $Y$, we define the correlation between the random variables $X$ and $Y$, noted $\rho_{XY}$, as follows:
+
+$$\boxed{\rho_{XY} = \frac{\sigma_{XY}^2}{\sigma_X \sigma_Y}}$$
+
+Remark 1: we note that for any random variables $X,Y$, we have $\rho_{XY} \in [-1,1].$
+
+Remark 2: If $X$ and $Y$ are independent, then $\rho_{XY} = 0$.
+
+```{python}
+# Joint distributions example
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.stats import multivariate_normal
+
+# Bivariate normal
+mu = [0, 0]
+cov = [[1, 0.5], [0.5, 1]]
+rv = multivariate_normal(mu, cov)
+
+x, y = np.mgrid[-3:3:.1, -3:3:.1]
+pos = np.dstack((x, y))
+pdf = rv.pdf(pos)
+
+plt.contourf(x, y, pdf)
+plt.title("Bivariate Normal PDF")
+plt.colorbar()
+plt.show()
+
+# Covariance and correlation
+print(f"Covariance matrix:\n{np.array(cov)}")
+rho = cov[0][1] / (np.sqrt(cov[0][0]) * np.sqrt(cov[1][1]))
+print(f"Correlation: {rho}")
+```

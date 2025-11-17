@@ -1,11 +1,4 @@
----
-format: html
-jupyter: python3
----
-
-# Introduction to Probability and Combinatorics
-
-Theory in Markdown/LaTeX; code for exploration.
+## Introduction to Probability and Combinatorics
 
 - Sample space ― The set of all possible outcomes of an experiment is known as the sample space of the experiment and is denoted by $S$.
 
@@ -15,15 +8,15 @@ Theory in Markdown/LaTeX; code for exploration.
 
 Axiom 1 ― Every probability is between 0 and 1 included, i.e:
 
-$$0 \leq P(E) \leq 1$$
+$$\boxed{0 \leq P(E) \leq 1}$$
 
 Axiom 2 ― The probability that at least one of the elementary events in the entire sample space will occur is 1, i.e:
 
-$$P(S) = 1$$
+$$\boxed{P(S) = 1}$$
 
 Axiom 3 ― For any sequence of mutually exclusive events $E_1, \dots, E_n$, we have:
 
-$$P(\bigcup_{i=1}^n E_i) = \sum_{i=1}^n P(E_i)$$
+$$\boxed{P(\bigcup_{i=1}^n E_i) = \sum_{i=1}^n P(E_i)}$$
 
 ```{python}
 # Simulate coin flips to verify axioms
@@ -45,11 +38,11 @@ print(f"P(heads or tails) = {p_union}")
 
 - Permutation ― A permutation is an arrangement of $r$ objects from a pool of $n$ objects, in a given order. The number of such arrangements is given by $P(n,r)$, defined as:
 
-$P(n,r) = \frac{n!}{(n-r)!}$
+$$\boxed{P(n,r) = \frac{n!}{(n-r)!}}$$
 
 - Combination ― A combination is an arrangement of $r$ objects from a pool of $n$ objects, where the order does not matter. The number of such arrangements is given by $C(n,r)$, defined as:
 
-$C(n,r) = \frac{P(n,r)}{r!} = \frac{n!}{r!(n-r)!}$
+$$\boxed{C(n,r) = \frac{P(n,r)}{r!} = \frac{n!}{r!(n-r)!}}$$
 
 Remark: we note that for $0 \leq r \leq n$, we have $P(n,r) \geq C(n,r)$.
 

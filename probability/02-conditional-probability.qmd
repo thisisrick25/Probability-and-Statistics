@@ -1,13 +1,8 @@
----
-format: html
-jupyter: python3
----
-
-# Conditional Probability
+## Conditional Probability
 
 - Bayes' rule ― For events $A$ and $B$ such that $P(B)>0$, we have:
 
-$P(A|B) = \frac{P(B|A)P(A)}{P(B)}$
+$$\boxed{P(A|B) = \frac{P(B|A)P(A)}{P(B)}}$$
 
 Remark: we have $P(A \cap B) = P(A)P(B|A) = P(A|B)P(B)$.
 
@@ -27,17 +22,17 @@ print(f"P(Disease|Positive) = {p_d_pos:.4f}")
 
 - Partition ― Let $\{A_i, i \in [[1,n]]\}$ be such that for all $i$, $A_i \neq \emptyset$. We say that $\{A_i\}$ is a partition if we have:
 
-$\forall i \neq j, A_i \cap A_j = \emptyset$ and $\bigcup_{i=1}^n A_i = S$
+$$\boxed{\forall i \neq j, A_i \cap A_j = \emptyset \text{ and } \bigcup_{i=1}^n A_i = S}$$
 
 Remark: for any event $B$ in the sample space, we have $P(B) = \sum_{i=1}^n P(B|A_i)P(A_i)$.
 
 - Extended form of Bayes' rule ― Let $\{A_i, i \in [[1,n]]\}$ be a partition of the sample space. We have:
 
-$P(A_k|B) = \frac{P(B|A_k)P(A_k)}{\sum_{i=1}^n P(B|A_i)P(A_i)}$
+$$\boxed{P(A_k|B) = \frac{P(B|A_k)P(A_k)}{\sum_{i=1}^n P(B|A_i)P(A_i)}}$$
 
 - Independence ― Two events $A$ and $B$ are independent if and only if we have:
 
-$P(A \cap B) = P(A)P(B)$
+$$\boxed{P(A \cap B) = P(A)P(B)}$$
 
 ```{python}
 # Check independence

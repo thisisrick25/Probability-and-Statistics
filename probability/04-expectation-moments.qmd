@@ -1,31 +1,26 @@
----
-format: html
-jupyter: python3
----
-
-# Expectation and Moments of the Distribution
+## Expectation and Moments of the Distribution
 
 - Expected value ― The expected value of a random variable, also known as the mean value or the first moment, is often noted $E[X]$ or $\mu$ and is the value that we would obtain by averaging the results of the experiment infinitely many times. It is computed as follows:
 
-(D) $$E[X] = \sum_{i=1}^n x_i f(x_i)$$ and (C) $$E[X] = \int_{-\infty}^{+\infty} x f(x) dx$$
+(D) $$\boxed{E[X] = \sum_{i=1}^n x_i f(x_i)}$$ and (C) $$\boxed{E[X] = \int_{-\infty}^{+\infty} x f(x) dx}$$
 
 - Generalization of the expected value ― The expected value of a function of a random variable $g(X)$ is computed as follows:
 
-(D) $$E[g(X)] = \sum_{i=1}^n g(x_i) f(x_i)$$ and (C) $$E[g(X)] = \int_{-\infty}^{+\infty} g(x) f(x) dx$$
+(D) $$\boxed{E[g(X)] = \sum_{i=1}^n g(x_i) f(x_i)}$$ and (C) $$\boxed{E[g(X)] = \int_{-\infty}^{+\infty} g(x) f(x) dx}$$
 
 - $k$th moment ― The $k$th moment, noted $E[X^k]$, is the value of $X^k$ that we expect to observe on average on infinitely many trials. It is computed as follows:
 
-(D) $$E[X^k] = \sum_{i=1}^n x_i^k f(x_i)$$ and (C) $$E[X^k] = \int_{-\infty}^{+\infty} x^k f(x) dx$$
+(D) $$\boxed{E[X^k] = \sum_{i=1}^n x_i^k f(x_i)}$$ and (C) $$\boxed{E[X^k] = \int_{-\infty}^{+\infty} x^k f(x) dx}$$
 
 Remark: the $k$th moment is a particular case of the previous definition with $g: X \mapsto X^k$.
 
 - Variance ― The variance of a random variable, often noted $\mathrm{Var}(X)$ or $\sigma^2$, is a measure of the spread of its distribution function. It is determined as follows:
 
-$$\mathrm{Var}(X) = E[(X - E[X])^2] = E[X^2] - E[X]^2$$
+$$\boxed{\mathrm{Var}(X) = E[(X - E[X])^2] = E[X^2] - E[X]^2}$$
 
 - Standard deviation ― The standard deviation of a random variable, often noted $\sigma$, is a measure of the spread of its distribution function which is compatible with the units of the actual random variable. It is determined as follows:
 
-$$\sigma = \sqrt{\mathrm{Var}(X)}$$
+$$\boxed{\sigma = \sqrt{\mathrm{Var}(X)}}$$
 
 ```{python}
 # Compute moments for normal distribution
@@ -41,22 +36,22 @@ print(f"Var(X) = {var}")
 print(f"Std(X) = {std}")
 ```
 
-❐ Characteristic function ― A characteristic function $\psi(\omega)$ is derived from a probability density function $f(x)$ and is defined as:
+- Characteristic function ― A characteristic function $\psi(\omega)$ is derived from a probability density function $f(x)$ and is defined as:
 
-(D) $$\psi(\omega) = \sum_{i=1}^n f(x_i) e^{i \omega x_i}$$ and (C) $$\psi(\omega) = \int_{-\infty}^{+\infty} f(x) e^{i \omega x} dx$$
+(D) $$\boxed{\psi(\omega) = \sum_{i=1}^n f(x_i) e^{i \omega x_i}}$$ and (C) $$\boxed{\psi(\omega) = \int_{-\infty}^{+\infty} f(x) e^{i \omega x} dx}$$
 
-❐ Euler's formula ― For $\theta \in \mathbb{R}$, the Euler formula is the name given to the identity:
+- Euler's formula ― For $\theta \in \mathbb{R}$, the Euler formula is the name given to the identity:
 
-$$e^{i\theta} = \cos(\theta) + i \sin(\theta)$$
+$$\boxed{e^{i\theta} = \cos(\theta) + i \sin(\theta)}$$
 
-❐ Revisiting the $k$th moment ― The $k$th moment can also be computed with the characteristic function as follows:
+- Revisiting the $k$th moment ― The $k$th moment can also be computed with the characteristic function as follows:
 
-$$E[X^k] = \frac{1}{i^k} \left[ \frac{\partial^k \psi}{\partial \omega^k} \right]_{\omega=0}$$
+$$\boxed{E[X^k] = \frac{1}{i^k} \left[ \frac{\partial^k \psi}{\partial \omega^k} \right]_{\omega=0}}$$
 
-❐ Transformation of random variables ― Let the variables $X$ and $Y$ be linked by some function. By noting $f_X$ and $f_Y$ the distribution function of $X$ and $Y$ respectively, we have:
+- Transformation of random variables ― Let the variables $X$ and $Y$ be linked by some function. By noting $f_X$ and $f_Y$ the distribution function of $X$ and $Y$ respectively, we have:
 
 $$f_Y(y) = f_X(x) \left| \frac{dx}{dy} \right|$$
 
-❐ Leibniz integral rule ― Let $g$ be a function of $x$ and potentially $c$, and $a,b$ boundaries that may depend on $c$. We have:
+- Leibniz integral rule ― Let $g$ be a function of $x$ and potentially $c$, and $a,b$ boundaries that may depend on $c$. We have:
 
 $$\frac{\partial}{\partial c} \left( \int_a^b g(x) dx \right) = \frac{\partial b}{\partial c} \cdot g(b) - \frac{\partial a}{\partial c} \cdot g(a) + \int_a^b \frac{\partial g}{\partial c}(x) dx$$
