@@ -2,5 +2,47 @@
 
 - [Stanford CME-106 Probability Cheatsheet](https://stanford.edu/~shervine/teaching/cme-106/cheatsheet-probability)
 
+## Core & Applied Probability Courses
+- [18.05 – Introduction to Probability and Statistics (Spring 2022)](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/) (Undergrad)
+
+- [RES.6-012 – Introduction to Probability (Spring 2018)](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/) (Undergrad)
+
+- [6.041 – Probabilistic Systems Analysis and Applied Probability (Fall 2010)](https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/) (Undergrad)
+
+- [6.041SC – Probabilistic Systems Analysis and Applied Probability (Fall 2013, OCW Scholar)](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/) (Undergrad)
+
+- [18.440 – Probability and Random Variables (Spring 2014)](https://ocw.mit.edu/courses/18-440-probability-and-random-variables-spring-2014/) (Undergrad)
+
+- [18.600 – Probability and Random Variables (Fall 2019)](https://ocw.mit.edu/courses/18-600-probability-and-random-variables-fall-2019/) (Undergrad)
+
+- [18.175 – Theory of Probability (Spring 2014)](https://ocw.mit.edu/courses/18-175-theory-of-probability-spring-2014/) (Graduate)
+
+- [6.436J – Fundamentals of Probability (Fall 2018)](https://ocw.mit.edu/courses/6-436j-fundamentals-of-probability-fall-2018/) (Graduate)
+
+- [18.445 – Introduction to Stochastic Processes (Spring 2015)](https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/) (Graduate)
+
+- [6.262 – Discrete Stochastic Processes (Spring 2011)](https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/) (Graduate)
+
+- [15.070J – Advanced Stochastic Processes (Fall 2013)](https://ocw.mit.edu/courses/15-070j-advanced-stochastic-processes-fall-2013/) (Graduate)
+
+- [6.432 – Stochastic Processes, Detection, and Estimation (Spring 2004)](https://ocw.mit.edu/courses/6-432-stochastic-processes-detection-and-estimation-spring-2004/) (Graduate)
+
+- [6.231 – Dynamic Programming and Stochastic Control (Fall 2015)](https://ocw.mit.edu/courses/6-231-dynamic-programming-and-stochastic-control-fall-2015/) (Graduate)
+
+- [1.151 – Probability and Statistics in Engineering (Spring 2005)](https://ocw.mit.edu/courses/1-151-probability-and-statistics-in-engineering-spring-2005/) (Graduate)
+
+- [1.010 – Uncertainty in Engineering (Fall 2008)](https://ocw.mit.edu/courses/1-010-uncertainty-in-engineering-fall-2008/) (Undergrad)
+
+
+## Other Courses With Substantial Probability Components
+- [6.042J – Mathematics for Computer Science (Fall 2010)](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/) (Undergrad)
+
+- [18.S096 – Topics in Mathematics with Applications in Finance (Fall 2013)](https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/) (Undergrad/Graduate Mixed)
+
+- [15.450 – Analytics of Finance (Fall 2010)](https://ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/) (Graduate)
+
+- [6.1200J – Mathematics for Computer Science (Spring 2024)](https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/) (Undergrad)
+
+
 ::: {#refs}
 :::
