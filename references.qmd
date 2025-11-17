@@ -1,0 +1,6 @@
+# References {.unnumbered}
+
+- [Stanford CME-106 Probability Cheatsheet](https://stanford.edu/~shervine/teaching/cme-106/cheatsheet-probability)
+
+::: {#refs}
+:::

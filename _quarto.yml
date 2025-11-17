@@ -1,0 +1,22 @@
+project:
+  type: book
+
+book:
+  title: "Probability and Statistics"
+  author: "Swapnaneel Patra"
+  date: "11/15/2025"
+  chapters:
+    - index.qmd
+    - probability.qmd
+    # - references.qmd
+        
+
+bibliography: references.bib
+# number-depth: 1
+
+format:
+  html:
+    theme: darkly
+    number-sections: true
+  pdf:
+    documentclass: scrreprt
