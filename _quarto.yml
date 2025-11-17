@@ -8,7 +8,7 @@ book:
   chapters:
     - index.qmd
     - probability.qmd
-    # - references.qmd
+    - references.qmd
         
 
 bibliography: references.bib

@@ -1,6 +1,7 @@
 # References {.unnumbered}
 
 - [Stanford CME-106 Probability Cheatsheet](https://stanford.edu/~shervine/teaching/cme-106/cheatsheet-probability)
+
 ## Core & Applied Probability Courses
 - [18.05 – Introduction to Probability and Statistics (Spring 2022)](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/) (Undergrad)
 - [RES.6-012 – Introduction to Probability (Spring 2018)](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/) (Undergrad)
