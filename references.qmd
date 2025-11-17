@@ -1,47 +1,41 @@
 # References {.unnumbered}
 
 - [Stanford CME-106 Probability Cheatsheet](https://stanford.edu/~shervine/teaching/cme-106/cheatsheet-probability)
-
 ## Core & Applied Probability Courses
 - [18.05 – Introduction to Probability and Statistics (Spring 2022)](https://ocw.mit.edu/courses/18-05-introduction-to-probability-and-statistics-spring-2022/) (Undergrad)
-
 - [RES.6-012 – Introduction to Probability (Spring 2018)](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/) (Undergrad)
-
 - [6.041 – Probabilistic Systems Analysis and Applied Probability (Fall 2010)](https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/) (Undergrad)
-
-- [6.041SC – Probabilistic Systems Analysis and Applied Probability (Fall 2013, OCW Scholar)](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/) (Undergrad)
-
+- [6.041SC – Probabilistic Systems Analysis and Applied Probability (OCW Scholar, Fall 2013)](https://ocw.mit.edu/courses/6-041sc-probabilistic-systems-analysis-and-applied-probability-fall-2013/) (Undergrad)
 - [18.440 – Probability and Random Variables (Spring 2014)](https://ocw.mit.edu/courses/18-440-probability-and-random-variables-spring-2014/) (Undergrad)
-
 - [18.600 – Probability and Random Variables (Fall 2019)](https://ocw.mit.edu/courses/18-600-probability-and-random-variables-fall-2019/) (Undergrad)
-
 - [18.175 – Theory of Probability (Spring 2014)](https://ocw.mit.edu/courses/18-175-theory-of-probability-spring-2014/) (Graduate)
-
 - [6.436J – Fundamentals of Probability (Fall 2018)](https://ocw.mit.edu/courses/6-436j-fundamentals-of-probability-fall-2018/) (Graduate)
-
 - [18.445 – Introduction to Stochastic Processes (Spring 2015)](https://ocw.mit.edu/courses/18-445-introduction-to-stochastic-processes-spring-2015/) (Graduate)
-
 - [6.262 – Discrete Stochastic Processes (Spring 2011)](https://ocw.mit.edu/courses/6-262-discrete-stochastic-processes-spring-2011/) (Graduate)
-
 - [15.070J – Advanced Stochastic Processes (Fall 2013)](https://ocw.mit.edu/courses/15-070j-advanced-stochastic-processes-fall-2013/) (Graduate)
-
 - [6.432 – Stochastic Processes, Detection, and Estimation (Spring 2004)](https://ocw.mit.edu/courses/6-432-stochastic-processes-detection-and-estimation-spring-2004/) (Graduate)
-
 - [6.231 – Dynamic Programming and Stochastic Control (Fall 2015)](https://ocw.mit.edu/courses/6-231-dynamic-programming-and-stochastic-control-fall-2015/) (Graduate)
-
 - [1.151 – Probability and Statistics in Engineering (Spring 2005)](https://ocw.mit.edu/courses/1-151-probability-and-statistics-in-engineering-spring-2005/) (Graduate)
-
 - [1.010 – Uncertainty in Engineering (Fall 2008)](https://ocw.mit.edu/courses/1-010-uncertainty-in-engineering-fall-2008/) (Undergrad)
 
-
-## Other Courses With Substantial Probability Components
-- [6.042J – Mathematics for Computer Science (Fall 2010)](https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-fall-2010/) (Undergrad)
-
-- [18.S096 – Topics in Mathematics with Applications in Finance (Fall 2013)](https://ocw.mit.edu/courses/18-s096-topics-in-mathematics-with-applications-in-finance-fall-2013/) (Undergrad/Graduate Mixed)
-
-- [15.450 – Analytics of Finance (Fall 2010)](https://ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/) (Graduate)
-
-- [6.1200J – Mathematics for Computer Science (Spring 2024)](https://ocw.mit.edu/courses/6-1200j-mathematics-for-computer-science-spring-2024/) (Undergrad)
+## Other OCW courses with substantial probability / stochastic / uncertainty components
+- [6.034 – Artificial Intelligence (Fall 2010) — probabilistic inference / Bayes nets unit](https://ocw.mit.edu/courses/6-034-artificial-intelligence-fall-2010/) (Undergrad)
+- [6.0002 – Introduction to Computational Thinking & Data Science (Fall 2016) — Monte Carlo, stochastic thinking, sampling](https://ocw.mit.edu/courses/6-0002-introduction-to-computational-thinking-and-data-science-fall-2016/) (Undergrad)
+- [18.657 – Mathematics of Machine Learning (Fall 2015) — probability & high-probability bounds for learning](https://ocw.mit.edu/courses/18-657-mathematics-of-machine-learning-fall-2015/) (Graduate)
+- [15.097 – Prediction: Machine Learning and Statistics (Spring 2012)](https://ocw.mit.edu/courses/15-097-prediction-machine-learning-and-statistics-spring-2012/) (Graduate)
+- [6.867 – Machine Learning (Fall 2006) — probabilistic bounds & probabilistic guarantees in lectures/notes](https://ocw.mit.edu/courses/6-867-machine-learning-fall-2006/) (Graduate)
+- [18.065 – Matrix Methods in Data Analysis, Signal Processing, and Machine Learning (Spring 2018) — linear algebra with applications to probability/statistics](https://ocw.mit.edu/courses/18-065-matrix-methods-in-data-analysis-signal-processing-and-machine-learning-spring-2018/) (Undergrad/Graduate)
+- [12.S990 – Quantifying Uncertainty (Fall 2012)](https://ocw.mit.edu/courses/12-s990-quantifying-uncertainty-fall-2012/) (Graduate) 
+- [8.591J / 7.81J / 7.32 – Systems Biology (Fall 2014) — stochastic modeling / stochastic gene expression units](https://ocw.mit.edu/courses/8-591j-systems-biology-fall-2014/) (Mixed Undergrad/Graduate)
+- [15.072J – Queues: Theory and Applications (Spring 2006)](https://ocw.mit.edu/courses/15-072j-queues-theory-and-applications-spring-2006/) (Graduate)
+- [2.161 – Signal Processing: Continuous and Discrete (Fall 2008) — random signals / stochastic parts](https://ocw.mit.edu/courses/2-161-signal-processing-continuous-and-discrete-fall-2008/) (Undergrad)
+- [6.011 – Signals, Systems and Inference / Comm & Signal Processing (Spring 2010)](https://ocw.mit.edu/courses/6-011-introduction-to-communication-control-and-signal-processing-spring-2010/) (Undergrad)
+- [16.322 – Stochastic Estimation and Control (Fall 2004)](https://ocw.mit.edu/courses/16-322-stochastic-estimation-and-control-fall-2004/) (Graduate)
+- [HST.582J / 6.555J / 16.456 – Biomedical Signal & Image Processing (Spring 2007) — random signals & probability applied to signals](https://ocw.mit.edu/courses/hst-582j-biomedical-signal-and-image-processing-spring-2007/) (Graduate)
+- [15.450 – Analytics of Finance (Fall 2010) — Monte Carlo / stochastic calculus in finance](https://ocw.mit.edu/courses/15-450-analytics-of-finance-fall-2010/) (Graduate)
+- [14.01SC – Principles of Microeconomics (Fall 2011) — unit on uncertainty / expected utility (module)](https://ocw.mit.edu/courses/14-01sc-principles-of-microeconomics-fall-2011/pages/unit-6-topics-in-intermediate-microeconomics/uncertainty/) (Undergrad)
+- [18.650 (formerly 18.443) – Statistics for Applications (Fall 2016)](https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/) (Undergrad)
+- [18.655 – Mathematical Statistics (Spring 2016)](https://ocw.mit.edu/courses/18-655-mathematical-statistics-spring-2016/) (Graduate)
 
 
 ::: {#refs}
