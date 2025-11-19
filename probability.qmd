@@ -1,5 +1,7 @@
 # Probability
 
+{{< include probability/00-introduction-and-axioms.qmd >}}
+
 {{< include probability/01-probability-combinatorics.qmd >}}
 
 {{< include probability/02-conditional-probability.qmd >}}

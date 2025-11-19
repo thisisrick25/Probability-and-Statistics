@@ -1,0 +1,217 @@
+## Introduction and Axioms
+
+### What Is Probability?
+
+Probability provides a mathematical framework for reasoning under uncertainty.  
+Following the structure used in MIT courses [@MIT1805; @MIT6041]:
+
+- **Model randomness** (uncertain outcomes)
+- **Quantify uncertainty** (numerical measures)
+- **Support inference** (Bayes, estimation, testing)
+
+A probability model consists of:
+
+- **Sample space** $\Omega$
+- **Events** $A \subseteq \Omega$
+- **Probability measure** $P$
+
+---
+
+### Sample Spaces
+
+#### Finite Sample Spaces
+- Coin flip: $\Omega = \{H, T\}$
+- Die roll: $\Omega = \{1,\ldots,6\}$
+
+#### Countably Infinite
+- Number of arrivals: $\Omega = \{0,1,2,\ldots\}$
+- Trials until success
+
+#### Continuous
+- Measurements, noise: $\Omega = \mathbb{R}$
+- Time-to-failure: $[0,\infty)$
+
+---
+
+### Events and Set Algebra
+
+Events are subsets of the sample space [@MIT6042J].
+
+Operations:
+
+- **Union:** $A \cup B$
+- **Intersection:** $A \cap B$
+- **Complement:** $A^c$
+- **Difference:** $A \setminus B$
+- **Disjoint:** $A \cap B = \emptyset$
+
+Useful identity:
+
+$$
+\boxed{(A \cup B)^c = A^c \cap B^c}
+$$
+
+---
+
+### Sigma-Algebras (Intuitive)
+
+A sigma-algebra $\mathcal{F}$ is a collection of events closed under:
+
+- Complements  
+- Countable unions  
+- Containing $\Omega$
+
+This ensures probabilities are well-defined in continuous spaces [@MIT18600].
+
+---
+
+### Kolmogorov Axioms of Probability
+
+Let $(\Omega, \mathcal{F}, P)$ be a probability space [@MIT18440].
+
+#### Non-negativity
+$$
+\boxed{P(A) \ge 0}
+$$
+
+#### Normalization
+$$
+\boxed{P(\Omega) = 1}
+$$
+
+#### Countable Additivity
+If $A_1, A_2, \ldots$ are disjoint:
+$$
+\boxed{P\Big(\bigcup_{i=1}^\infty A_i\Big)
+= \sum_{i=1}^\infty P(A_i)}
+$$
+
+---
+
+### Important Consequences
+
+#### Complement Rule
+$$
+\boxed{P(A^c) = 1 - P(A)}
+$$
+
+#### Monotonicity
+If $A \subseteq B$:
+$$
+\boxed{P(A) \le P(B)}
+$$
+
+#### Inclusion–Exclusion
+$$
+\boxed{P(A \cup B) = P(A) + P(B) - P(A \cap B)}
+$$
+
+#### Union Bound
+$$
+\boxed{
+P(A \cup B) \le P(A) + P(B)
+}
+$$
+
+---
+
+### Conditional Probability (Preview)
+
+Defined for $P(B) > 0$:
+
+$$
+\boxed{
+P(A \mid B) = \frac{P(A \cap B)}{P(B)}
+}
+$$
+
+This leads naturally to total probability and Bayes’ rule (Module 1) [@MIT1805].
+
+---
+
+### Independence (Preview)
+
+Events $A$ and $B$ are independent if:
+
+$$
+\boxed{
+P(A \cap B) = P(A)P(B)
+}
+$$
+
+Used extensively in stochastic processes [@MIT6262].
+
+---
+
+### Programming Demonstration
+
+Simulate events and verify set identities numerically.
+
+```{python}
+import numpy as np
+rng = np.random.default_rng(0)
+
+N = 10_000
+omega = rng.random(N)
+
+A = omega < 0.3
+B = omega < 0.5
+
+P_A  = A.mean()
+P_B  = B.mean()
+P_Ac = 1 - P_A
+P_A_cap_B = (A & B).mean()
+P_A_cup_B = (A | B).mean()
+
+(P_A, P_B, P_Ac, P_A_cap_B, P_A_cup_B)
+```
+
+#### Inclusion–Exclusion Check
+
+lhs = P_A_cup_B
+rhs = P_A + P_B - P_A_cap_B
+(lhs, rhs)
+
+---
+
+### Exercises
+
+#### Axiom Application
+Given:
+
+- $P(A)=0.4$
+- $P(B)=0.55$
+- $P(A \cap B)=0.2$
+
+Compute:
+
+- $P(A \cup B)$
+- $P(A^c)$
+- $P(A^c \cap B)$
+
+---
+
+#### Simulated Event Algebra
+
+Simulate:
+
+- $P(A)=0.3$
+- $P(B)=0.4$
+
+Let $C = A \oplus B$ (exclusive OR).
+
+Estimate:
+
+$$
+P(C) = P(A) + P(B) - 2P(A \cap B)
+$$
+
+---
+
+#### Set Identity Proof
+
+Show:
+
+$$
+(A \cup B)^c = A^c \cap B^c
+$$
