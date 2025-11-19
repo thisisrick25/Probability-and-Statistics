@@ -12,11 +12,13 @@ book:
         
 
 bibliography: references.bib
-# number-depth: 1
+csl: styles/ieee.csl
+number-depth: 0
 
 format:
   html:
     theme: darkly
+    css: styles/custom.css
     number-sections: true
   pdf:
     documentclass: scrreprt
