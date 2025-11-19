@@ -1,0 +1,11 @@
+/* Make the bibkey (id) stand out and monospace */
+#refs .csl-left-margin {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono",
+    "Courier New", monospace;
+  font-weight: 600;
+}
+
+#refs .csl-right-inline {
+  margin-left: 8rem;
+  padding-left: 0;
+}
