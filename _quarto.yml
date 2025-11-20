@@ -7,23 +7,27 @@ book:
   date: "11/15/2025"
   chapters:
     - index.qmd
-    - probability.qmd
-    - references.qmd
+    - part: "Probability"
+      chapters:
+      - probability/00-introduction-and-axioms.qmd
+      - probability/01-probability-combinatorics.qmd
+      - probability/02-conditional-probability.qmd
+      - probability/03-random-variables.qmd
+      - probability/04-expectation-moments.qmd
+      - probability/05-probability-distributions.qmd
+      - probability/06-jointly-distributed.qmd
         
+    - references.qmd
 
 bibliography: references.bib
-csl: styles/ieee.csl
+csl: "https://www.zotero.org/styles/ieee-with-url"
 number-depth: 0
 
 format:
   html:
     theme: darkly
-    css: styles/custom.css
     number-sections: true
-    # smooth-scroll: true
-    # toc: true
-    # toc-depth: 2
-    # toc-expand: true
+    smooth-scroll: true
 
   pdf:
     documentclass: scrreprt

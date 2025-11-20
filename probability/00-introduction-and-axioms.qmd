@@ -2,72 +2,98 @@
 
 ### What Is Probability?
 
-Probability provides a mathematical framework for reasoning under uncertainty.  
-Following the structure used in MIT courses [@MIT1805; @MIT6041]:
+Probability is a mathematical framework for quantifying uncertainty [@MIT1805; @MIT6041]. It is used to:
 
-- **Model randomness** (uncertain outcomes)
-- **Quantify uncertainty** (numerical measures)
-- **Support inference** (Bayes, estimation, testing)
+- Model random phenomena  
+- Assign numerical likelihoods to events  
+- Support statistical inference  
+- Analyze stochastic systems  
 
 A probability model consists of:
 
-- **Sample space** $\Omega$
-- **Events** $A \subseteq \Omega$
-- **Probability measure** $P$
+- **Sample space** $\Omega$  
+- **Sigma-algebra** $\mathcal{F}$  
+- **Probability measure** $P$  
 
----
+Together forming the probability space:
+
+$$
+\boxed{
+(\Omega, \mathcal{F}, P)
+}
+$$
 
 ### Sample Spaces
 
 #### Finite Sample Spaces
-- Coin flip: $\Omega = \{H, T\}$
-- Die roll: $\Omega = \{1,\ldots,6\}$
+- $\Omega = \{H, T\}$  
+- $\Omega = \{1,\ldots,6\}$  
 
-#### Countably Infinite
-- Number of arrivals: $\Omega = \{0,1,2,\ldots\}$
-- Trials until success
+#### Countably Infinite Sample Spaces
+- $\Omega = \{0,1,2,\ldots\}$  
+- Trials until first success  
 
-#### Continuous
-- Measurements, noise: $\Omega = \mathbb{R}$
-- Time-to-failure: $[0,\infty)$
+#### Continuous Sample Spaces
+- $\Omega = \mathbb{R}$  
+- $\Omega = [0,\infty)$  
 
----
+### Event
 
-### Events and Set Algebra
-
-Events are subsets of the sample space [@MIT6042J].
-
-Operations:
-
-- **Union:** $A \cup B$
-- **Intersection:** $A \cap B$
-- **Complement:** $A^c$
-- **Difference:** $A \setminus B$
-- **Disjoint:** $A \cap B = \emptyset$
-
-Useful identity:
+An **event** is a subset of the sample space:
 
 $$
-\boxed{(A \cup B)^c = A^c \cap B^c}
+\boxed{
+A \subseteq \Omega
+}
 $$
 
----
+The event occurs if the outcome $\omega$ lies in $A$.
 
-### Sigma-Algebras (Intuitive)
+### Set Algebra of Events
 
-A sigma-algebra $\mathcal{F}$ is a collection of events closed under:
+Events can be combined using set operations [@MIT6042J]:
 
-- Complements  
-- Countable unions  
-- Containing $\Omega$
+- **Union:** $A \cup B$  
+- **Intersection:** $A \cap B$  
+- **Complement:** $A^c$  
+- **Difference:** $A \setminus B$  
+- **Disjoint:** $A \cap B = \emptyset$  
 
-This ensures probabilities are well-defined in continuous spaces [@MIT18600].
+Identity:
 
----
+$$
+\boxed{
+(A \cup B)^c = A^c \cap B^c
+}
+$$
+
+Special events:
+
+- Impossible event: $\emptyset$  
+- Certain event: $\Omega$  
+
+### Sigma-Algebra
+
+A **sigma-algebra** $\mathcal{F}$ is a collection of subsets of $\Omega$ satisfying [@MIT18600]:
+
+1. $\Omega \in \mathcal{F}$  
+2. If $A \in \mathcal{F}$, then $A^c \in \mathcal{F}$  
+3. If $A_1,A_2,\ldots \in \mathcal{F}$, then $\bigcup_{i=1}^\infty A_i \in \mathcal{F}$  
+
+Thus:
+
+$$
+\boxed{
+\mathcal{F} \subseteq 2^\Omega
+\quad\text{closed under complements and countable unions}
+}
+$$
+
+Sigma-algebras ensure probabilities are defined consistently in infinite sample spaces.
 
 ### Kolmogorov Axioms of Probability
 
-Let $(\Omega, \mathcal{F}, P)$ be a probability space [@MIT18440].
+Let $(\Omega,\mathcal{F},P)$ be a probability space [@MIT18440].
 
 #### Non-negativity
 $$
@@ -80,72 +106,117 @@ $$
 $$
 
 #### Countable Additivity
-If $A_1, A_2, \ldots$ are disjoint:
+For disjoint events $A_1, A_2, \ldots$:
 $$
-\boxed{P\Big(\bigcup_{i=1}^\infty A_i\Big)
-= \sum_{i=1}^\infty P(A_i)}
+\boxed{
+P\Big(\bigcup_{i=1}^\infty A_i\Big)
+= \sum_{i=1}^\infty P(A_i)
+}
 $$
 
----
+### Derived Properties
 
-### Important Consequences
+#### Probability of the Empty Set
+$$
+\boxed{
+P(\emptyset) = 0
+}
+$$
 
 #### Complement Rule
 $$
-\boxed{P(A^c) = 1 - P(A)}
+\boxed{
+P(A^c) = 1 - P(A)
+}
 $$
 
-#### Monotonicity
+#### Monotonicity  
 If $A \subseteq B$:
 $$
-\boxed{P(A) \le P(B)}
-$$
-
-#### Inclusion–Exclusion
-$$
-\boxed{P(A \cup B) = P(A) + P(B) - P(A \cap B)}
-$$
-
-#### Union Bound
-$$
 \boxed{
-P(A \cup B) \le P(A) + P(B)
+P(A) \le P(B)
 }
 $$
 
----
-
-### Conditional Probability (Preview)
-
-Defined for $P(B) > 0$:
-
+#### Inclusion–Exclusion  
 $$
 \boxed{
-P(A \mid B) = \frac{P(A \cap B)}{P(B)}
+P(A \cup B)
+= P(A) + P(B) - P(A \cap B)
 }
 $$
 
-This leads naturally to total probability and Bayes’ rule (Module 1) [@MIT1805].
-
----
-
-### Independence (Preview)
-
-Events $A$ and $B$ are independent if:
-
+#### Union Bound  
 $$
 \boxed{
-P(A \cap B) = P(A)P(B)
+P(A \cup B)
+\le
+P(A) + P(B)
 }
 $$
 
-Used extensively in stochastic processes [@MIT6262].
+### Continuity of Probability
 
----
+These limits follow from the axioms [@MIT18600].
+
+#### Continuity from Below  
+If $A_1 \subseteq A_2 \subseteq \cdots$:
+$$
+\boxed{
+P(A_n)
+\to
+P\!\left(\bigcup_{n=1}^\infty A_n\right)
+}
+$$
+
+#### Continuity from Above  
+If $A_1 \supseteq A_2 \supseteq \cdots$:
+$$
+\boxed{
+P(A_n)
+\to
+P\!\left(\bigcap_{n=1}^\infty A_n\right)
+}
+$$
+
+### Interpretations of Probability
+
+Common interpretations include [@MIT1805]:
+
+- Classical (symmetry)  
+- Frequentist (long-run frequency)  
+- Bayesian (degree of belief)  
+- Axiomatic (Kolmogorov framework)  
+
+### Notation Conventions
+
+- Outcome: $\omega$  
+- Event: $A, B$  
+- Complement: $A^c$  
+- Indicator: $\mathbf{1}_A$  
+- Probability: $P(A)$  
+
+### Examples
+
+**Example: Finite Probability Space**
+
+Let $\Omega=\{1,2,3\}$ with  
+$P(1)=0.2,\;P(2)=0.5,\;P(3)=0.3$.
+
+Then:
+
+- $P(\{1,3\}) = 0.5$  
+- $P(\{2\}^c) = 0.5$  
+
+**Example: Inclusion–Exclusion**
+
+Given $P(A)=0.4$, $P(B)=0.5$, $P(A\cap B)=0.2$:
+
+$$
+P(A\cup B)=0.7
+$$
 
 ### Programming Demonstration
-
-Simulate events and verify set identities numerically.
 
 ```{python}
 import numpy as np
@@ -157,8 +228,8 @@ omega = rng.random(N)
 A = omega < 0.3
 B = omega < 0.5
 
-P_A  = A.mean()
-P_B  = B.mean()
+P_A = A.mean()
+P_B = B.mean()
 P_Ac = 1 - P_A
 P_A_cap_B = (A & B).mean()
 P_A_cup_B = (A | B).mean()
@@ -168,50 +239,8 @@ P_A_cup_B = (A | B).mean()
 
 #### Inclusion–Exclusion Check
 
+```{python}
 lhs = P_A_cup_B
 rhs = P_A + P_B - P_A_cap_B
 (lhs, rhs)
-
----
-
-### Exercises
-
-#### Axiom Application
-Given:
-
-- $P(A)=0.4$
-- $P(B)=0.55$
-- $P(A \cap B)=0.2$
-
-Compute:
-
-- $P(A \cup B)$
-- $P(A^c)$
-- $P(A^c \cap B)$
-
----
-
-#### Simulated Event Algebra
-
-Simulate:
-
-- $P(A)=0.3$
-- $P(B)=0.4$
-
-Let $C = A \oplus B$ (exclusive OR).
-
-Estimate:
-
-$$
-P(C) = P(A) + P(B) - 2P(A \cap B)
-$$
-
----
-
-#### Set Identity Proof
-
-Show:
-
-$$
-(A \cup B)^c = A^c \cap B^c
-$$
+```
